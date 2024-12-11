@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run nodemon\" \"npm run webext\"",
+    "nodemon": "nodemon --exec \"npm run devbuild\"",
+    "webext": "web-ext run -s ./dist",
+    "devbuild": "npm run tailwind && npm run webpack",
+    "tailwind": "tailwind -i ./src/input.css -o ./dist/output.css",
+    "webpack": "webpack"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "tailwindcss": "^3.4.16",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "csv": "^6.3.11"
+  }
+}

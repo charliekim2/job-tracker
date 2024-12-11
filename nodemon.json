@@ -1,0 +1,4 @@
+{
+  "watch": ["src/**/*.js", "dist/**/*.html"],
+  "ext": "js,html"
+}
